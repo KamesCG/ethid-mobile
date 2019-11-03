@@ -1,0 +1,63 @@
+{
+  "name": "ethdid-mobile",
+  "description": "Open Source Etheruem Identity Wallet",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:update": "jest -u",
+    "test:coverage": "jest --coverage",
+    "run:ios": "react-native run-ios",
+    "run:android": "react-native run-android",
+    "flush": "watchman watch-del-all"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/native": "^10.0.22",
+    "@react-native-community/async-storage": "^1.6.2",
+    "dot-prop-immutable": "^1.5.0",
+    "dot-prop-immutable-chain": "^0.0.3",
+    "emotion-theming": "^10.0.19",
+    "ethers": "^4.0.39",
+    "identity-wallet": "^0.2.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "react": "16.9.0",
+    "react-native": "0.61.3",
+    "react-native-gesture-handler": "^1.5.0",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-modal": "^11.5.1",
+    "react-native-reanimated": "^1.4.0",
+    "react-native-screens": "^2.0.0-alpha.7",
+    "react-native-svg": "^9.13.3",
+    "react-native-swiper": "1.6.0-rc.1",
+    "react-native-ui-lib": "^3.39.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-navigation": "^4.0.10",
+    "react-navigation-drawer": "^2.3.3",
+    "react-navigation-stack": "^1.10.3",
+    "react-navigation-tabs": "^2.5.6",
+    "react-redux": "^7.1.1",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "5.10.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/runtime": "^7.6.3",
+    "@bam.tech/react-native-make": "^1.0.3",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.57.0",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
