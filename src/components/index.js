@@ -6,6 +6,8 @@ import Update from './Update';
 import ProfileCardSimple from './ProfileCardSimple';
 import RadioGroup from './RadioGroup';
 import TextInput from './TextInput';
+import QRScanner from './QRScanner';
+import QRScannerModal from './QRScannerModal';
 import SegmentedControl from './SegmentedControl';
 
 export {
@@ -17,5 +19,7 @@ export {
   TextInput,
   ProfileCardSimple,
   SegmentedControl,
+  QRScanner,
+  QRScannerModal,
   Update,
 };

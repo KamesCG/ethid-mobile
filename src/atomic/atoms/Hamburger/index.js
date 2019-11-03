@@ -3,12 +3,15 @@ import {TouchableOpacity, Menu, Text, View} from 'react-native';
 import {SvgUri} from 'react-native-svg';
 export default ({navigation}) => (
   <View style={styles.container}>
-    <SvgUri
-      style={styles.icon}
-      width="18"
-      height="18"
-      uri="https://image.flaticon.com/icons/svg/1058/1058992.svg"
-    />
+    <TouchableOpacity
+      onPress={() => navigation.navigate({routeName: 'QRScanner'})}>
+      <SvgUri
+        style={styles.icon}
+        width="18"
+        height="18"
+        uri="https://image.flaticon.com/icons/svg/1058/1058992.svg"
+      />
+    </TouchableOpacity>
     <TouchableOpacity onPress={navigation.openDrawer}>
       <Text style={styles.label}>MENU</Text>
     </TouchableOpacity>

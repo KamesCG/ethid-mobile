@@ -40,6 +40,9 @@ import {ethers} from 'ethers';
  */
 const Context = createContext({
   instance: ethers,
+  providers: {
+    rinkeby: ethers.getDefaultProvider('rinkeby'),
+  },
   store: {
     contracts: [],
     deploy: [],

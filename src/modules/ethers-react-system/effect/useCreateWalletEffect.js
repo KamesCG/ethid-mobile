@@ -17,7 +17,7 @@ export const useCreateWalletEffect = (state, dispatch) => {
     if (!state.wallet) {
       const runEffect = async () => {
         let wallet = ethers.Wallet.createRandom();
-        // console.log(wallet, 'walletwallet');
+        console.log(wallet, 'walletwallet');
         dispatch({
           type: 'SET_WALLET_SUCCESS',
           payload: wallet,

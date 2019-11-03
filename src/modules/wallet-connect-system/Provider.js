@@ -1,25 +1,22 @@
-import React, {useContext, useReducer, useEffect} from 'react';
+import React, {useContext, useReducer} from 'react';
 import Context from './Context';
 import reducers from './reducer';
-import ProviderEffects from './effects';
-import {useCreateWalletEffect, useWalletLoadFromStorage} from './effect';
+import {useInitializeEffect, useWalletCallEffect} from './effect';
 import * as actions from './actions';
 
 const Provider = ({children, ...props}) => {
   const initialState = useContext(Context);
   const [state, dispatch] = useReducer(reducers, initialState);
-  console.log(state, 'Ethers State');
-
-  ProviderEffects(useEffect, state, dispatch);
-  useWalletLoadFromStorage(state, dispatch);
-  // useCreateWalletEffect(state, dispatch);
-
+  console.log(state, 'Wallet Connect State');
+  useInitializeEffect(state, dispatch);
+  useWalletCallEffect(state, dispatch, props.navigate);
   return (
     <Context.Provider
       value={{
         ...state,
         dispatch,
-        ...actions,
+        initConnection: payload => actions.initConnection(payload, dispatch),
+        setNavigation: payload => actions.setNavigation(payload, dispatch),
       }}>
       {children}
     </Context.Provider>

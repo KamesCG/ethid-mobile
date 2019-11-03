@@ -1,5 +1,7 @@
 # ETHDID Mobile
 
+The EthDID Mobile project is an Open Source Decentralized Identity Mobile Appliation built with React Native.
+
 ### Open Source Etheruem Identity Wallet
 
 An Experiment to Push the Boundaries of 3ID. An MIT Licensed Decentralized Identity Wallet using the 3ID standard. Built to be Open and Evolve with the new emerging 3ID standard. Fork the code, use the modules and compose together decentralized identity mobile applications.

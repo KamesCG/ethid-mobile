@@ -1,33 +1,33 @@
-import { hashCode } from '../utilities';
-import { ethers } from 'ethers';
+import {hashCode} from '../utilities';
+import {ethers} from 'ethers';
 /**
  *
  * @param {Object} provider
  */
-export const setProvider = ({ provider }, dispatch) =>
+export const setProvider = (payload, dispatch) =>
   dispatch({
     type: 'SET_PROVIDER',
-    payload: provider
+    payload: provider,
   });
 
 /**
  *
  * @param {Object} provider
  */
-export const setProviderStatus = ({ provider }, dispatch) =>
+export const setProviderStatus = ({provider}, dispatch) =>
   dispatch({
     type: 'SET_PROVIDER_STATUS',
-    payload: provider
+    payload: provider,
   });
 
 /* --- Library ---- */
-export const loadContractIntoLibrary = ({ abi, contractName }) =>
+export const loadContractIntoLibrary = ({abi, contractName}) =>
   dispatch({
     type: 'LOAD_CONTRACT_INTO_LIBRARY_REQUEST',
     payload: {
       abi,
-      contractName
-    }
+      contractName,
+    },
   });
 
 /**
@@ -42,7 +42,7 @@ export const loadContractIntoLibrary = ({ abi, contractName }) =>
  * As provided by metamask, dapp browser or whichever other provider is triggered by ethereum.enable()
  * ! @NOTE The Contract parameter is assumed to follow the general structure resulting from compiling via the truffle (ie it has the abi, networks used, etc)
  */
-export const initContract = ({ Contract, address }, dispatch, wallet) => {
+export const initContract = ({Contract, address}, dispatch, wallet) => {
   const networks = Object.keys(Contract.networks);
   const latestAddress = Contract.networks[networks[0]].address;
   const contract = new ethers.Contract(latestAddress, Contract.abi, wallet);
@@ -51,54 +51,54 @@ export const initContract = ({ Contract, address }, dispatch, wallet) => {
     id: hashCode(Contract),
     payload: {
       contract,
-      address: address || latestAddress
-    }
+      address: address || latestAddress,
+    },
   });
 };
 
-export const initContractFromLibrary = ({ address, contractName }, dispatch) =>
+export const initContractFromLibrary = ({address, contractName}, dispatch) =>
   dispatch({
     type: 'INIT_CONTRACT_FROM_LIBRARY_REQUEST',
     payload: {
       address,
-      contractName
-    }
+      contractName,
+    },
   });
 
-export const deployContract = ({ contract, delta, values }, dispatch) =>
+export const deployContract = ({contract, delta, values}, dispatch) =>
   dispatch({
     type: 'DEPLOY_CONTRACT_REQUEST',
     payload: {
       contract,
-      values
+      values,
     },
-    delta: delta || (contract && contract.contractName)
+    delta: delta || (contract && contract.contractName),
   });
 
 export const deployContractFromBytecode = (abi, bytecode, delta, dispatch) =>
   dispatch({
     type: 'DEPLOY_CONTRACT_FROM_BYTECODE_REQUEST',
     input: bytecode,
-    delta: delta || hashCode(abi)
+    delta: delta || hashCode(abi),
   });
 
-export const signMessageTyped = ({ message, delta }, dispatch) =>
+export const signMessageTyped = ({message, delta}, dispatch) =>
   dispatch({
     type: 'SIGN_TYPED_MESSAGE_REQUEST',
     payload: message,
-    id: delta || hashCode(message.toString())
+    id: delta || hashCode(message.toString()),
   });
 
-export const signMessage = ({ message, delta }) =>
+export const signMessage = ({message, delta}) =>
   dispatch({
     type: 'SIGN_MESSAGE_REQUEST',
     payload: message,
-    id: delta || hashCode(message)
+    id: delta || hashCode(message),
   });
 
 export const sendTransaction = (transaction, delta, dispatch) =>
   dispatch({
     type: 'SIGN_TRANSACTION_REQUEST',
     input: transaction,
-    delta
+    delta,
   });

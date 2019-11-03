@@ -25,6 +25,11 @@ const reducerActions = (state, action) => {
         ...state,
         providerStatus: payload,
       };
+    case 'SET_WALLET_LOAD_FROM_STORAGE':
+      return {
+        ...state,
+        wallet: action.payload,
+      };
     case 'SET_ADDRESS':
       return {
         ...state,

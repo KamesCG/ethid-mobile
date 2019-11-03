@@ -12,22 +12,23 @@ import {colors} from '@styles';
 import {store, persistor} from './store/configuration/store';
 import ApplicationInitialize from './index';
 import {EthersProvider} from './modules/ethers-react-system';
-// import {IDWalletProvider} from './modules/identity-wallet-system';
+import {WalletConnectProvider} from './modules/wallet-connect-system';
 
 YellowBox.ignoreWarnings(['componentWillUnmount']);
 YellowBox.ignoreWarnings(['ViewPagerAndroid']);
+YellowBox.ignoreWarnings(['Setting a timer']);
 
 const App = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={<LoadingIndicator />} persistor={persistor}>
-        <EthersProvider>
-          {/* <IDWalletProvider> */}
-          <ThemeProvider theme={theme}>
-            <ApplicationInitialize />
-          </ThemeProvider>
-          {/* </IDWalletProvider> */}
-        </EthersProvider>
+        <WalletConnectProvider>
+          <EthersProvider>
+            <ThemeProvider theme={theme}>
+              <ApplicationInitialize />
+            </ThemeProvider>
+          </EthersProvider>
+        </WalletConnectProvider>
       </PersistGate>
     </Provider>
   );

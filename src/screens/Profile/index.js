@@ -7,14 +7,11 @@ const stackNavigator = createStackNavigator(
   {
     Account: {
       screen: MainTabNavigator,
-      navigationOptions: {
-        title: 'Account',
-      },
     },
   },
   {
     defaultNavigationOptions: ({navigation}) => ({
-      headerRight: <Hamburger navigation={navigation} />,
+      header: null,
     }),
   },
 );
