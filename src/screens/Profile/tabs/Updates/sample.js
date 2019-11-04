@@ -1,0 +1,38 @@
+export const data = [
+  {
+    id: 1,
+    title: 'Connecting with Friends',
+    subtitle: 'Earned the Social Badge',
+    price: '1000 DEV',
+    badge: 'NEW',
+    badgeColor: '#3cd39f',
+    image: 'https://image.flaticon.com/icons/svg/1373/1373258.svg',
+  },
+  {
+    id: 2,
+    title: 'Goal Superhero',
+    subtitle: 'You Are Achieving Goals Regularily',
+    price: '500 DEV',
+    badge: 'Starter',
+    badgeColor: '#3cd39f',
+    image: 'https://image.flaticon.com/icons/svg/1006/1006142.svg',
+  },
+  {
+    id: 3,
+    title: 'Globe Trotter',
+    subtitle: 'You Are Achieving Goals Regularily',
+    price: '500 DEV',
+    badge: 'Starter',
+    badgeColor: '#3cd39f',
+    image: 'https://image.flaticon.com/icons/svg/1373/1373287.svg',
+  },
+  {
+    id: 4,
+    title: 'ETH Master',
+    subtitle: 'Keep Sharing the ETH Knowledge',
+    price: '500 DEV',
+    badge: 'Starter',
+    badgeColor: '#3cd39f',
+    image: 'https://image.flaticon.com/icons/svg/1183/1183612.svg',
+  },
+];

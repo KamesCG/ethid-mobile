@@ -203,7 +203,3 @@ Interesting in an Open Source decentralized identity wallet? Want to contribute 
 - QRScanner
 - Wallet
 - WalletTransactions
-
-```
-
-```
