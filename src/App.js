@@ -7,7 +7,7 @@ import {PersistGate} from 'redux-persist/integration/react';
 import {ThemeProvider} from 'emotion-theming';
 
 /* --- Local --- */
-import theme from '@assets/theme';
+// import theme from '@assets/theme';
 import {colors} from '@styles';
 import {store, persistor} from './store/configuration/store';
 import ApplicationInitialize from './index';
@@ -18,6 +18,10 @@ import {WalletConnectProvider} from './modules/wallet-connect-system';
 YellowBox.ignoreWarnings(['componentWillUnmount']);
 YellowBox.ignoreWarnings(['ViewPagerAndroid']);
 YellowBox.ignoreWarnings(['Setting a timer']);
+
+const theme = {
+  blue: '#3a95ee',
+};
 
 const App = () => {
   return (

@@ -1,4 +1,5 @@
 const theme = {
+  blue: '#3a95ee',
   palette: {
     primary: ['#2855de'],
     blue: ['#4f6ee4', '#3e5bcc', '#2d48b3', '#1c3494'],
@@ -30,7 +31,7 @@ const theme = {
     purple: '#716aca',
     purpleDark: '#2e2e48',
     turquoise: '#3ba0ac',
-    whiteOpaque: 'rgba(255,255,255, 0.7)'
+    whiteOpaque: 'rgba(255,255,255, 0.7)',
   },
   gradient: {
     // Brand Gradient Styles
@@ -55,7 +56,7 @@ const theme = {
     orange: ['#ffa319', '#fb3306'],
     orangish: ['#ffb123', '#e9a100'],
     red: ['#ef473a', '#cb2d3e'],
-    cloudy: ['#FFF', '#e7e3e3'], 
+    cloudy: ['#FFF', '#e7e3e3'],
     white: ['#FFF', '#fefefe'],
   },
 
@@ -70,6 +71,6 @@ const theme = {
     7: '0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)',
     8: '0px 2px 20px rgba(0, 0, 0, 0.13), 2px 2px 20px rgba(0, 0, 0, 0)',
   },
-}
+};
 
-export default theme
+export default theme;

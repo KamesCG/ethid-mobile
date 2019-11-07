@@ -7,6 +7,7 @@ import {ButtonLink, Modal, Flex, Text} from 'atoms';
 import PersonalSignature from './PersonalSignature';
 import Signature from './Signature';
 import TransactionSignature from './TransactionSignature';
+import SignClaim from './SignClaim';
 
 const Request = (method, props) =>
   ({
@@ -14,12 +15,14 @@ const Request = (method, props) =>
     personal_sign: <PersonalSignature {...props} />,
     eth_signTransaction: <TransactionSignature {...props} />,
     eth_sendTransaction: <TransactionSignature {...props} />,
+    '3id_signClaim': <SignClaim {...props} />,
   }[method]);
 
 export default props => {
   const [request] = useState(props.navigation && props.navigation.state.params);
   useEffect(() => {}, []);
   console.log(request, props, 'wallet requests');
+
   return (
     <ImageBackground
       style={{

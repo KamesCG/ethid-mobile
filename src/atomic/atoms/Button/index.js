@@ -1,21 +1,22 @@
 import React from 'react';
 import styled from '@emotion/native';
-import {TouchableOpacity} from 'react-native';
+import {colors} from '@styles';
 
 const Button = styled.View`
-  background: ${props => props.background};
+  background-color: ${props => colors[props.bg] || colors.primary};
+  color: #fff;
+  border-radius: 4px;
+  padding: 12px;
+  text-align: center;
 `;
 
-Button.defaultProps = {
-  background: '#FFF',
-  borderRadius: 10,
-  paddingVertical: 8,
-  paddingHorizontal: 20,
-  textAlign: 'center',
-};
+const Text = styled.Text`
+  color: #fff;
+  text-align: center;
+`;
 
-export default ({onPress, ...props}) => (
-  <TouchableOpacity onPress={onPress}>
-    <Button {...props} style={props.sx} />
-  </TouchableOpacity>
+export default ({sx, sxLabel, children, ...props}) => (
+  <Button style={sx} {...props}>
+    <Text style={sxLabel}>{children}</Text>
+  </Button>
 );

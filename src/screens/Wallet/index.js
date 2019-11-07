@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 import {ProfileHeader} from 'molecules';
 import {VerificationCategory, RadioGroup} from '@components';
-
+import {Button, Text} from 'atoms';
 export default props => {
   return (
     <View style={{}}>
@@ -24,7 +24,13 @@ export default props => {
             onChange={() => {}}
           />
         </View>
-        <View style={{paddingVertical: 20}}></View>
+        <View style={{paddingVertical: 20}}>
+          <Button bg="blue">Review Transactions</Button>
+          <Button bg="green" sx={{marginVertical: 10}}>
+            Verify Message
+          </Button>
+          <Button bg="red">Create Burner Wallet</Button>
+        </View>
       </View>
     </View>
   );

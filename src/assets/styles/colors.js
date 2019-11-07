@@ -14,10 +14,11 @@ const blueVersion = {
   darkGray: '#4d4d4d',
   lightGray: '#9b9b9b',
   white: '#ffffff',
-  blue: '#5A81F7',
+  blue: '#186aed',
   bluish: '#F1F1F7',
   black: '#000000',
-  green: '#6DD0A3',
+  red: '#de4509',
+  green: '#26a823',
   yellow: '#ffc247',
 };
 
